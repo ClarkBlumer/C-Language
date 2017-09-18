@@ -1,0 +1,12 @@
+
+Reading from the names.txt 30493 took 0.006916 msecs
+
+Bubble Sort
+Sorting the linked list with bubble sort
+took 5.265133 msecs for 30493 nodes
+
+
+Merge Sort
+Sorting the linked list with merge sort
+took 0.013108 msecs for 30493 nodes
+

@@ -1,0 +1,2 @@
+Number of names with prefix of ma are 7
+Number of names with suffix of an are 3

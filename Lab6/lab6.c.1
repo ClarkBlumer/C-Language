@@ -1,0 +1,30 @@
+int main (int argc, char *argv[]) {
+	if (argc < 3) {
+		exit(1);
+	}
+	srand(time(NULL));
+	const int rows = atoi(argv[1]);
+	const int cols = atoi(argv[2]);
+	MatrixNode* head_a = NULL;
+	MatrixNode* head_b = NULL;
+	MatrixNode* result = NULL;
+	
+	printf("Matrix A\n");
+	create_linked_list_matrix(&head_a,rows,cols);
+	display_matrix(head_a);
+	printf("Total value of Matrix A is %d\n",find_total_value_of_the_matrix(head_a));
+	printf("Matrix B\n");
+	create_linked_list_matrix(&head_b,rows,cols);
+	display_matrix(head_b);
+	printf("Total value of Matrix B is %d\n",find_total_value_of_the_matrix(head_b));
+
+	create_linked_list_matrix(&result,rows,cols);
+
+	add_two_matrices_together(head_a,head_b,result);
+	write_result_to_file(result);
+
+	destroy_linked_list_matrix(&head_a); 
+	destroy_linked_list_matrix(&head_b);
+	destroy_linked_list_matrix(&result);
+
+}
